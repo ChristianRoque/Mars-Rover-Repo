@@ -64,3 +64,19 @@ function moveForward(rover){
   console.log("moveForward was called")
 }
 
+function command(theRover,orders) {
+  for (let i = 0; i < orders.length; i++){
+    let order = orders[i];
+    switch(order){
+      case "l": 
+        turnLeft(theRover);
+        break;
+      case "r":
+        turnRight(theRover);
+        break;
+      case "f":
+        moveForward(theRover);
+        break;
+    }
+}
+
